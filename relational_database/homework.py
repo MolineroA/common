@@ -20,7 +20,7 @@ def task_1_add_new_record_to_db(con) -> None:
 
     """
     with con.cursor() as cursor:
-        con.execute(
+    cursor.execute(
             '''INSERT INTO Customers
             VALUES(92, 'Thomas', 'David', 'Some Address', 'London', '774', 'Singapore');'''
         )
@@ -67,7 +67,7 @@ def task_4_update_customer(con):
 
     """
     with con.cursor() as cursor:
-        con.execute(
+        cursor.execute(
             '''UPDATE Customers
             SET CustomerName = 'Johnny Depp'
             WHERE CustomerID = '1';'''
@@ -82,7 +82,7 @@ def task_5_delete_the_last_customer(con) -> None:
         con: psycopg connection
     """
     with con.cursor() as cursor:
-        con.execute(
+        cursor.execute(
             '''DELETE FROM Customers
             WHERE CustomerID = (SELECT MAX(CustomerID)
             FROM Customers);'''
