@@ -1,7 +1,11 @@
 import random
 import unittest
 
+<<<<<<< HEAD
 from homework import (
+=======
+from python_functionality.homework import (
+>>>>>>> 6ef23a9a9c2f17460a24c9336a33cfea7d523ad0
     task_4_min_value_integers,
     task_5_min_value_strings,
     task_6_min_value_list_of_dicts,
