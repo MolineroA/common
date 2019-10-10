@@ -30,7 +30,8 @@ class TestRectangle(unittest.TestCase):
     def test_get_sum_of_corners_success(self):
         for i in range(1, 5):
             with self.subTest(i=i):
-                self.assertEqual(self.t_norm_rect.get_sum_of_corners(i), i * 90)
+                self.assertEqual(
+                    self.t_norm_rect.get_sum_of_corners(i), i * 90)
 
     def test_get_sum_of_corners_error(self):
         for i in range(5, 100):
@@ -54,7 +55,8 @@ class TestRectangle(unittest.TestCase):
                          self.t_sqr_rad_of_inscribed_circle)
 
     def test_get_radius_of_inscribed_circle_error(self):
-        self.assertRaises(ValueError, self.t_norm_rect.get_radius_of_inscribed_circle)
+        self.assertRaises(ValueError,
+                          self.t_norm_rect.get_radius_of_inscribed_circle)
 
 
 if __name__ == '__main__':
