@@ -18,6 +18,9 @@ def test_convert_number_to_hours():
 
 def test_largest_word():
     assert largest_word('fun&!! time') == 'time'
+    assert largest_word('I love dogs') == 'love'
+    assert largest_word('I d_!& dogs') == 'dogs'
+    assert largest_word('Very interesting text') == 'interesting'
 
 
 def test_words_in_backwards_order(monkeypatch):

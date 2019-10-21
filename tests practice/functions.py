@@ -9,7 +9,7 @@ def common_between_two_lists(a, b):
     and write a program that returns a list that contains only
     the elements that are common between the lists (without duplicates).
     '''
-    return list(set(a + b))
+    return [i for i in set(a) if i in b]
 
 
 def quantity_a_in_str(my_str):
@@ -29,11 +29,7 @@ def power_of_three(num):
     Input : 9
     Output : True
     '''
-    while num > 1:
-        if num % 3 != 0:
-            return False
-        num //= 3
-    return True
+    return num == math.pow(3, round(math.log(num) / math.log(3)))
 
 
 def add_until_a_single_digit(num):
@@ -140,7 +136,10 @@ def largest_word(in_string):
     Input:"I love dogs"
     Output:love
     '''
-    return max(in_string.split())
+    for char in in_string:
+        if not char.isalnum():
+            in_string = in_string.replace(char, ' ')
+    return max(in_string.split(), key=len)
 
 
 def words_in_backwards_order(in_string: str):

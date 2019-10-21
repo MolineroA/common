@@ -14,9 +14,9 @@ from functions import (common_between_two_lists,
 
 class Tests(unittest.TestCase):
     def test_common_between_two_lists(self):
-        a = [1, 1, 2, 4]
-        b = [1, 2, 3, 5]
-        result = [1, 2, 3, 4, 5]
+        a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+        b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        result = [1, 2, 3, 5, 8, 13]
         self.assertEqual(common_between_two_lists(a, b), result)
 
     def test_quantity_a_in_str(self):
@@ -25,9 +25,11 @@ class Tests(unittest.TestCase):
 
     def test_power_of_three_true(self):
         self.assertTrue(power_of_three(9), True)
+        self.assertTrue(power_of_three(27), True)
 
     def test_power_of_three_false(self):
         self.assertFalse(power_of_three(10), False)
+        self.assertFalse(power_of_three(21), False)
 
     def test_add_until_a_single_digit(self):
         self.assertEqual(add_until_a_single_digit(48), 3)
