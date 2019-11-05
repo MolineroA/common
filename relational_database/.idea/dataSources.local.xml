@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - cursor_db@localhost" uuid="99912634-10c2-4fac-97c6-4060364303b1">
+      <secret-storage>master_key</secret-storage>
+      <user-name>cursor</user-name>
+    </data-source>
+    <data-source name="PostgreSQL - cursor_db@127.0.0.1" uuid="e72aa69a-0b4e-4d9b-a709-98b82e9ab25f">
+      <secret-storage>master_key</secret-storage>
+      <user-name>cursor</user-name>
+      <schema-pattern>cursor_db.pg_catalog cursor_db.public</schema-pattern>
+      <default-schemas>cursor_db.public</default-schemas>
+    </data-source>
+  </component>
+</project>
