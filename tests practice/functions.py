@@ -75,7 +75,7 @@ def number_not_occur_twice(in_list):
     Input : [5, 3, 4, 3, 4]
     Output : 5
     '''
-    return [i for i in in_list if in_list.count(i) < 2][0]
+    return [i for i in in_list if in_list.count(i) < 2]
 
 
 def find_a_missing_number(in_list):
