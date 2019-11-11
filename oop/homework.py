@@ -54,7 +54,8 @@ class Cat:
         self.average_speed = self._set_average_speed()
 
     def eat(self, product):
-        self._increase_saturation_level(self.product_dict.get(product, 0))
+        few_points = self.product_dict.get(product, 0)
+        self._increase_saturation_level(few_points)
 
     def _reduce_saturation_level(self, value):
         self.saturation_level = self.saturation_level - value
