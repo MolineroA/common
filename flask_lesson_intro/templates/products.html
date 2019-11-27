@@ -10,7 +10,7 @@
 </style>
     <h1> {{ product }} </h1>
     <div id="images">
-         <img src="{{url_for('static', filename=product + '.png')}}" width="450px" height="410px">
+         <img src="{{url_for('static', filename=f'{product}.png')}}" width="450px" height="410px">
     </div>
     <div id="text">
         <p> {{ data }} </p>
